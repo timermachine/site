@@ -1,9 +1,9 @@
-import Head from "next/head";
-import React from "react";
-import Footer from "../footer/Footer";
-import Header from "../header/Header";
-import GoogleAnalytics from "../analytics/GoogleAnalytics";
-import { useRouter } from "next/router";
+import Head from 'next/head';
+import React from 'react';
+import Footer from '../footer/Footer';
+import Header from '../header/Header';
+import GoogleAnalytics from '../analytics/GoogleAnalytics';
+import { useRouter } from 'next/router';
 
 interface LayoutProps {
   pageTitle: string;
