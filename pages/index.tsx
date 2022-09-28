@@ -1,15 +1,15 @@
-import { NextSeo } from "next-seo";
-import { TypeBlogDetails } from "../types/TypeBlogDetails";
-import { getAllPosts } from "../lib/blog-api";
-import BlogPreview from "../components/blog-preview/BlogPreview";
+import { NextSeo } from 'next-seo';
+import { TypeBlogDetails } from '../types/TypeBlogDetails';
+import { getAllPosts } from '../lib/blog-api';
+import BlogPreview from '../components/blog-preview/BlogPreview';
 
 export const getStaticProps = async () => {
   const postList: TypeBlogDetails[] = getAllPosts();
 
   return {
     props: {
-      posts: postList,
-    },
+      posts: postList
+    }
   };
 };
 
@@ -29,27 +29,27 @@ const Home = ({ posts }: Props) => {
           title: `Blog | ${process.env.NEXT_PUBLIC_OWNER_NAME}`,
           url: `${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}`,
           description: `Technical blogs written by ${process.env.NEXT_PUBLIC_OWNER_NAME}`,
-          type: "article",
+          type: 'article',
           images: [
             {
               url: `${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}/static/profile.png`,
               width: 800,
               height: 600,
-              alt: "Profile Image",
-              type: "image/png",
+              alt: 'Profile Image',
+              type: 'image/png'
             },
             {
               url: `${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}/static/profile.png`,
               width: 900,
               height: 800,
-              alt: "Profile Image",
-              type: "image/png",
-            },
+              alt: 'Profile Image',
+              type: 'image/png'
+            }
           ],
-          site_name: `${process.env.NEXT_PUBLIC_OWNER_NAME}'s Blog`,
+          site_name: `${process.env.NEXT_PUBLIC_OWNER_NAME}'s Blog`
         }}
       />
-
+      <div id="timerApp" />
       <div className="flex flex-wrap p-5 gap-5 justify-evenly">
         {posts.map((blogItem: TypeBlogDetails) => (
           <BlogPreview
@@ -63,6 +63,8 @@ const Home = ({ posts }: Props) => {
           />
         ))}
       </div>
+      <script src="./static/timerapp/js/27.46b55e5a.chunk.js"></script>
+      <script src="./static/timerapp/js/main.5ffbf0b3.js"></script>
     </>
   );
 };
