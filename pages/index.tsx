@@ -50,7 +50,8 @@ const Home = ({ posts }: Props) => {
           site_name: `${process.env.NEXT_PUBLIC_OWNER_NAME}'s Blog`
         }}
       />
-      <div id="timerApp">pre load</div>
+      <div id="timer-app">pre load</div>
+      <TimerApp />
       <div className="flex flex-wrap p-5 gap-5 justify-evenly">
         {posts.map((blogItem: TypeBlogDetails) => (
           <BlogPreview
@@ -64,7 +65,9 @@ const Home = ({ posts }: Props) => {
           />
         ))}
       </div>
-      <TimerApp />
+      <div suppressHydrationWarning={true}>
+        {process.browser && <TimerApp />}
+      </div>
     </>
   );
 };
