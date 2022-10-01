@@ -1,13 +1,16 @@
-import React from 'react';
-import Script from 'next/script';
-import process from 'process';
+import dynamic from 'next/dynamic';
 
-export default function TimerApp() {
+const DynamicComponentWithNoSSR = dynamic(() => import('./TimerAppInner'), {
+  ssr: false
+});
+
+function Home() {
   return (
-    <>
-   {{if (process.browser &&
-      <div>its alive!</div>)
-    }}
-    </>
+    <div>
+      <p>here...</p>
+      <DynamicComponentWithNoSSR />
+    </div>
   );
 }
+
+export default Home;
