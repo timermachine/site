@@ -6,17 +6,20 @@ console.log('running inject-csc');
 pre: timer dist files to static. 
 read timer code file name.
 read .out/index.html √
-After target div add script to latest timer code. *
+After target div add script to latest timer code. *A
 write to .out/index.html √
 */
 // function readData(err, data) {
 //   return data;
 // }
 const indexPage = './out/index.html';
+const target = '<div id="timer-app">pre load target</div>';
+const dose = '<script src="static/timerapp.js" async/>';
 //const indexPage = 'next-env.d.ts' //testing
 
 var data = fs.readFileSync(indexPage);
 data += '<div>Injected+</div>';
+data = data.replace(target, target + dose);
 fs.writeFileSync(indexPage, data);
 
 // fs.readFile(indexPage, 'utf8', (err, data) => {
