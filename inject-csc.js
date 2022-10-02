@@ -18,7 +18,6 @@ const dose = '<script src="static/timerapp.js" async/>';
 //const indexPage = 'next-env.d.ts' //testing
 
 var data = fs.readFileSync(indexPage);
-data += '<div>Injected+</div>';
 data = data.replace(target, target + dose);
 fs.writeFileSync(indexPage, data);
 
