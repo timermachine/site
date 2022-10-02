@@ -13,13 +13,14 @@ write to .out/index.html √
 //   return data;
 // }
 const indexPage = './out/index.html';
-const target = '<div id="timer-app" />';
-const dose = '<script src="static/timerapp.js" async/>';
+const target = '<div id="timer-app">pre load target</div>';
+const dose =
+  '<div id="timer-app">here</div><script src="static/timerapp.js" async/>';
 //const indexPage = 'next-env.d.ts' //testing
 
 var data = fs.readFileSync(indexPage);
 data = data.toString('utf8');
-data = data.replace(target, target + dose);
+data = data.replace(target, dose);
 fs.writeFileSync(indexPage, data);
 
 // fs.readFile(indexPage, 'utf8', (err, data) => {
