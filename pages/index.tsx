@@ -50,7 +50,7 @@ const Home = ({ posts }: Props) => {
           site_name: `${process.env.NEXT_PUBLIC_OWNER_NAME}'s Blog`
         }}
       />
-      <div id="timer-app">...</div>
+      <div id="timer-app" />
 
       {/* <TimerApp /> */}
       <div className="flex flex-wrap justify-evenly gap-5 p-5">

@@ -13,7 +13,7 @@ write to .out/index.html √
 //   return data;
 // }
 const indexPage = './out/index.html';
-const target = '<div id="timer-app">pre load target</div>';
+const target = '<div id="timer-app"/>';
 const dose = '<script src="static/timerapp.js" async/>';
 //const indexPage = 'next-env.d.ts' //testing
 
