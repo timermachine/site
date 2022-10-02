@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[539],{3539:function(n,e,r){r.r(e),r.d(e,{default:function(){return u}});var t=r(5893);r(7294);function u(){return(0,t.jsx)(t.Fragment,{children:(0,t.jsx)("div",{children:"its alive!"})})}}}]);
