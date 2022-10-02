@@ -2,7 +2,7 @@ import { NextSeo } from 'next-seo';
 import { TypeBlogDetails } from '../types/TypeBlogDetails';
 import { getAllPosts } from '../lib/blog-api';
 import BlogPreview from '../components/blog-preview/BlogPreview';
-import TimerApp from '../components/timerApp/TimerApp';
+// import TimerApp from '../components/timerApp/TimerApp';
 
 export const getStaticProps = async () => {
   const postList: TypeBlogDetails[] = getAllPosts();
@@ -50,8 +50,8 @@ const Home = ({ posts }: Props) => {
           site_name: `${process.env.NEXT_PUBLIC_OWNER_NAME}'s Blog`
         }}
       />
-      <div id="timer-app">pre load</div>
-      <TimerApp />
+      <div id="timer-app">pre load target</div>
+      {/* <TimerApp /> */}
       <div className="flex flex-wrap p-5 gap-5 justify-evenly">
         {posts.map((blogItem: TypeBlogDetails) => (
           <BlogPreview
@@ -65,9 +65,9 @@ const Home = ({ posts }: Props) => {
           />
         ))}
       </div>
-      <div suppressHydrationWarning={true}>
+      {/* <div suppressHydrationWarning={true}>
         {process.browser && <TimerApp />}
-      </div>
+      </div> */}
     </>
   );
 };
