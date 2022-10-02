@@ -13,9 +13,8 @@ write to .out/index.html √
 //   return data;
 // }
 const indexPage = './out/index.html';
-const target = '<div id="timer-app">pre load target</div>';
-const dose =
-  '<div id="timer-app">here</div><script src="static/timerapp.js" async/>';
+const target = ' <div id="timer-script">timer script target</div>';
+const dose = '<script src="static/timerapp.js" async/>';
 //const indexPage = 'next-env.d.ts' //testing
 
 var data = fs.readFileSync(indexPage);

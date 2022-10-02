@@ -51,7 +51,6 @@ const Home = ({ posts }: Props) => {
         }}
       />
       <div id="timer-app">pre load target</div>
-
       {/* <TimerApp /> */}
       <div className="flex flex-wrap justify-evenly gap-5 p-5">
         {posts.map((blogItem: TypeBlogDetails) => (
@@ -70,6 +69,7 @@ const Home = ({ posts }: Props) => {
         {process.browser && <TimerApp />}
       </div> */}
       {/* <script src="static/timerapp.js" /> */}
+      <div id="timer-script">timer script target</div>
     </>
   );
 };
