@@ -18,6 +18,11 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/timerApp/XTimerApp.Xtsx"
+  ],
   "exclude": ["node_modules"]
 }
